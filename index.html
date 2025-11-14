@@ -59,29 +59,26 @@
       padding: 14px 30px;
       margin-top: 25px;
       font-size: 1.3rem;
-      background: #fff;
+      background: transparent;
       border-radius: 14px;
       text-decoration: none;
       color: #ff4b6e;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: none;
       transition: 0.3s ease;
       cursor: pointer;
-      border: none;
+      border: 2px solid #ff4b6e;
     }
 
     .button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
     #message {
       max-width: 640px;
       margin: 30px auto 0;
-      background: rgba(255,255,255,0.8);
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       text-align: left;
+      white-space: pre-wrap;
     }
 
     @media (max-width: 480px) {
@@ -90,30 +87,23 @@
     }
   </style>
 </head>
-
-<body>
-  <div class="container">
-    <div class="heart">❤</div>
-
-    <div style="margin: 20px 0;">
-      <iframe
-        width="300"
-        height="56"
-        src="https://www.youtube.com/embed/7wkP5QZ8mAM?rel=0&controls=1&loop=1&playlist=7wkP5QZ8mAM"
-        title="Glass Animals - Sometimes I Think About You"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-     <iframe
+<iframe
   width="300"
   height="56"
-  src="https://www.youtube.com/embed/7wkP5QZ8mAM?autoplay=1&controls=1&loop=1&playlist=7wkP5QZ8mAM"
+  src="https://www.youtube.com/embed/7wkP5QZ8mAM?rel=0&controls=1&loop=1&playlist=7wkP5QZ8mAM&autoplay=1"
   title="Glass Animals - Sometimes I Think About You"
   frameborder="0"
   allow="autoplay; encrypted-media"
   allowfullscreen
 ></iframe>
-    </div>
+<body>
+  <div class="container">
+    <div class="heart">❤</div>
+
+    <audio id="birthdayAudio" autoplay loop muted style="display:none;">
+      <source src="audio/sometimes_i_think_about_you.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
     <h1>Happy Birthday, Simisola</h1>
     <p>
@@ -124,7 +114,7 @@
 
     <button id="surpriseBtn" class="button">Click for a Surprise</button>
 
-    <p id="message" style="display:none; margin-top:30px; font-size:1.25rem; white-space:pre-wrap;"></p>
+    <p id="message" style="display:none; margin-top:30px; font-size:1.25rem;"></p>
   </div>
 
   <script>
