@@ -85,25 +85,22 @@
       .container { padding: 20px; }
       h1 { font-size: 2.2rem; }
     }
+
+    .audio-controls {
+      margin-top: 20px;
+    }
   </style>
 </head>
-<iframe
-  width="300"
-  height="56"
-  src="https://www.youtube.com/embed/7wkP5QZ8mAM?rel=0&controls=1&loop=1&playlist=7wkP5QZ8mAM&autoplay=1"
-  title="Glass Animals - Sometimes I Think About You"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  allowfullscreen
-></iframe>
+
 <body>
   <div class="container">
     <div class="heart">❤</div>
 
-<audio id="birthdayAudio" autoplay loop>
-  <source src="https://raw.githubusercontent.com/<username>/<repo>/main/sometimes_i_think_about_you.mp3" type="audio/mpeg">
-</audio>
-
+    <!-- Updated audio with correct raw GitHub link -->
+    <audio id="birthdayAudio" class="audio-controls" controls autoplay loop>
+      <source src="https://raw.githubusercontent.com/creativetomiwa/birthday-assets/main/Glass-animals.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
     <h1>Happy Birthday, Simisola</h1>
     <p>
@@ -124,7 +121,7 @@
       function showMessage() {
         const msg = `Simi, you are the warmth in my cold days, the calm in my storms, and the thought that fills my mind even when I try to sleep. You make life softer, sweeter, and endlessly more beautiful.
 
-On your birthday, I just want you to feel the love you effortlessly give wrapped around you. You deserve all the joy in the world, today and always, and I'm grateful every day that my world includes you.`;
+On your birthday, I  want you to feel the love you effortlessly give around you, and glowing. You deserve all the joy in the world, today and always, and I'm grateful every day that my world includes you.`;
 
         const el = document.getElementById('message');
         el.innerText = '';
